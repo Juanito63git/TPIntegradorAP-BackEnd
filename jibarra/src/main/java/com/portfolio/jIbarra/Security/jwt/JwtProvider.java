@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
+
+
 @Component
 public class JwtProvider {
     
@@ -21,8 +23,9 @@ public class JwtProvider {
     
     @Value("$(jwt.secret)")
     private String secret;
-    @Value("$(jwt.expiration)")
+    @Value("${jwt.expiration}")
     private int expiration;
+    
     
     public String generateToken(Authentication authentication) {
         UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();

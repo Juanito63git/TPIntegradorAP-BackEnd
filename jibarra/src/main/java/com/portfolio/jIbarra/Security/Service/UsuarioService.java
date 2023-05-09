@@ -7,6 +7,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+
 @Service
 @Transactional
 public class UsuarioService {
@@ -19,11 +21,11 @@ public class UsuarioService {
     }
 
     public boolean existByNombreUsuario(String nombreUsuario) {
-        return iusuarioRepository.existByNombreUsuario(nombreUsuario);
+        return iusuarioRepository.existsByNombreUsuario(nombreUsuario);
     }
     
      public boolean existByEmail(String email) {
-        return iusuarioRepository.existByEmail(email);
+        return iusuarioRepository.existsByEmail(email);
     }
      
      public void save(Usuario usuario){
