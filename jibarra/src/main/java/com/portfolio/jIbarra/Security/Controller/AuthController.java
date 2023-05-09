@@ -9,9 +9,9 @@ import com.portfolio.jIbarra.Security.Enums.RolNombre;
 import com.portfolio.jIbarra.Security.Service.RolService;
 import com.portfolio.jIbarra.Security.Service.UsuarioService;
 import com.portfolio.jIbarra.Security.jwt.JwtProvider;
-import jakarta.validation.Valid;
 import java.util.HashSet;
 import java.util.Set;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -74,7 +74,6 @@ public class AuthController {
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
     }
 
-    
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
 

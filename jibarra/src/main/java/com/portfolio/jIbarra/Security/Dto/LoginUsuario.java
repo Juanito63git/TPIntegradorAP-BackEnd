@@ -1,6 +1,6 @@
 package com.portfolio.jIbarra.Security.Dto;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class LoginUsuario {
 
